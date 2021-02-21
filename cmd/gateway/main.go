@@ -5,11 +5,11 @@ import (
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/awslabs/aws-lambda-go-api-proxy/fiber/adapter"
+	fiberL "github.com/awslabs/aws-lambda-go-api-proxy/fiber"
 	"github.com/gofiber/fiber/v2"
 )
 
-var fiberLambda *adapter.FiberLambda
+var fiberLambda *fiberL.FiberLambda
 
 func init() {
 	// create a new fiber app
@@ -20,7 +20,7 @@ func init() {
 			"IP": c.IP(),
 		})
 	})
-	fiberLambda = adapter.New(app)
+	fiberLambda = fiberL.New(app)
 }
 
 // Handler proxies our app requests to aws lambda
