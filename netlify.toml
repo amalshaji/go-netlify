@@ -1,5 +1,5 @@
 [build]
-  command = "./build.sh"
+  command = "GOBIN=$(pwd)/functions go install ./..."
   functions = "functions"
   publish = "public"
 
