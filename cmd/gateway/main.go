@@ -17,7 +17,7 @@ func init() {
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
-			"IP": c.IP(),
+			"message": "It's working!!",
 		})
 	})
 	fiberLambda = fiberL.New(app)
