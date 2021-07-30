@@ -1,1 +1,1 @@
-# Started template for gofiber on Netlify functions
+# Starter template for gofiber on Netlify functions
